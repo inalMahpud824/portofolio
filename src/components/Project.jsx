@@ -12,7 +12,7 @@ const ProjectSection = () => {
   };
   return (
     <>
-      <div className="w-full min-h-screen bg-[#2f2d2d] p-4">
+      <div className="w-full min-h-screen bg-[#2f2d2d] p-4" id="project">
         <h1 className="text-4xl font-bold my-5">My Project</h1>
         <Button onClick={() => handleFormDialog('career')}>
           <div className="flex justify-center items-center mt-10 ">

@@ -1,7 +1,7 @@
 const HeroSection = () => {
   return (
-    <div className="flex justify-between px-[9rem] py-4 items-center w-full min-h-screen">
-      <div className="w-[50%] text-left">
+    <div className="flex justify-center flex-wrap px-6 mt-20 py-4 items-center w-full min-h-screen lg:px-[9rem] lg:justify-between lg:mt-0" id="about">
+      <div className="text-left lg:w-[50%]">
         <h1 className="text-5xl font-bold">Hi, I am Inal Mahpud</h1>
         <h2 className="text-2xl font-semibold">
           I am a FullStack Web Developer

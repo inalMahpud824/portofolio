@@ -5,16 +5,18 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
+  IconButton,
 } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 
 const BackdropProduct = ({ onClose, type }) => {
   return (
     <>
-      {type === 'todo' ? (
-        <TodoList onClose={onClose}/>
-      ):(
-        <CareerConnect onClose={onClose}/>
+      {type === "todo" ? (
+        <TodoList onClose={onClose} />
+      ) : (
+        <CareerConnect onClose={onClose} />
       )}
     </>
   );
@@ -33,7 +35,12 @@ const TodoList = ({ onClose }) => {
       aria-describedby="alert-dialog-description"
     >
       <DialogTitle id="alert-dialog-title">
-        <h1>To Do List App</h1>
+        <div className="flex items-center justify-between">
+          <h1>To Do List App</h1>
+          <IconButton onClick={handleClose}>
+            <CloseIcon />
+          </IconButton>
+        </div>
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
@@ -61,14 +68,18 @@ const TodoList = ({ onClose }) => {
       </DialogContent>
       <DialogActions>
         <Button
-          onClick={ () => window.location.href = 'https://github.com/inalMahpud824/todolist'}
+          onClick={() =>
+            (window.location.href = "https://github.com/inalMahpud824/todolist")
+          }
           variant="contained"
           sx={{ backgroundColor: "white", color: "black" }}
         >
           Source Code
         </Button>
         <Button
-          onClick={() => window.location.href = 'https://todolist-red-gamma.vercel.app/'}
+          onClick={() =>
+            (window.location.href = "https://todolist-red-gamma.vercel.app/")
+          }
           variant="contained"
           sx={{ backgroundColor: "gray", color: "white" }}
         >
@@ -92,7 +103,12 @@ const CareerConnect = ({ onClose }) => {
       aria-describedby="alert-dialog-description"
     >
       <DialogTitle id="alert-dialog-title">
-        <h1>CareerConnect</h1>
+        <div className="flex items-center justify-between">
+          <h1>CareerConnect</h1>
+          <IconButton onClick={handleClose}>
+            <CloseIcon />
+          </IconButton>
+        </div>
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
@@ -117,7 +133,9 @@ const CareerConnect = ({ onClose }) => {
       </DialogContent>
       <DialogActions>
         <Button
-        onClick={() => window.location.href = 'https://github.com/CareerConnect-Rakamin'}
+          onClick={() =>
+            (window.location.href = "https://github.com/CareerConnect-Rakamin")
+          }
           variant="contained"
           sx={{ backgroundColor: "white", color: "black" }}
         >

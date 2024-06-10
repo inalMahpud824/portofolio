@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between relative">
           <div className="px-4">
             <a
-              href="#home"
+              href="#about"
               className="font-bold text-lg text-primary block py-6"
             >
               Inal Mahpud
@@ -38,34 +38,18 @@ const Navbar = () => {
               <ul className="block lg:flex ">
                 <li className="group">
                   <a
-                    href="#home"
-                    className="text-base text-white py-2 mx-8 flex group-hover:text-primary"
-                  >
-                    Beranda
-                  </a>
-                </li>
-                <li className="group">
-                  <a
                     href="#about"
                     className="text-base text-white py-2 mx-8 flex group-hover:text-primary"
                   >
-                    Tentang Saya
+                    About
                   </a>
                 </li>
                 <li className="group">
                   <a
-                    href="#portofolio"
+                    href="#project"
                     className="text-base text-white py-2 mx-8 flex group-hover:text-primary"
                   >
-                    Portofolio
-                  </a>
-                </li>
-                <li className="group">
-                  <a
-                    href="#blog"
-                    className="text-base text-white py-2 mx-8 flex group-hover:text-primary"
-                  >
-                    Blog
+                    Project
                   </a>
                 </li>
                 <li className="group">

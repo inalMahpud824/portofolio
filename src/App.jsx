@@ -1,4 +1,5 @@
 import "./App.css";
+import ContactSection from "./components/Contact";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import ProjectSection from "./components/Project";
@@ -12,6 +13,7 @@ function App() {
       */}
       <HeroSection />
       <ProjectSection />
+      <ContactSection />
     </>
   );
 }
