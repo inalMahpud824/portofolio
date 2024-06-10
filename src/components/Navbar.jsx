@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import '../css/header.css';
 const Navbar = () => {
   const handleClickHamburger = event => {
@@ -6,23 +6,10 @@ const Navbar = () => {
     event.currentTarget.classList.toggle('hamburger-active');
     navMenu.classList.toggle('hidden')
   };
-
-  useEffect(() => {
-    window.onscroll = function() {
-      const header = document.querySelector('header');
-      const fixedNav = header.offsetTop;
-    
-      if(window.pageYOffset > fixedNav) {
-        header.classList.add('navbar-fixed')
-      }else {
-        header.classList.remove('navbar-fixed')
-      }
-    }
-  }, [])
   
   return (
     <>
-    <header className="bg-transparent top-0 left-0 w-full flex items-center z-10 ">
+    <header className="bg-transparent top-0 left-0 w-full flex items-center z-10 backdrop-blur-md fixed">
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-4">
