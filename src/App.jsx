@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css";
 import ContactSection from "./components/Contact";
 import HeroSection from "./components/HeroSection";
@@ -5,6 +6,10 @@ import Navbar from "./components/Navbar";
 import ProjectSection from "./components/Project";
 
 function App() {
+useEffect(() => {
+  const element = document.querySelector('html');
+  element.classList.add('scroll-smooth');
+}, [])
 
   return (
     <>

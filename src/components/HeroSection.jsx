@@ -1,8 +1,27 @@
+import { ReactTyped } from "react-typed";
 const HeroSection = () => {
   return (
     <div className="flex justify-center flex-wrap px-6 mt-20 py-4 items-center w-full min-h-screen lg:px-[9rem] lg:justify-between lg:mt-0" id="about">
       <div className="text-left lg:w-[50%]">
-        <h1 className="text-5xl font-bold">Hi, I am Inal Mahpud</h1>
+        <ReactTyped strings={['Hi, I am Inal Mahpud']} className="text-4xl font-bold" typeSpeed={70} backSpeed={50} loop/>
+        {/* <div>
+    <ReactTyped strings={["Here you can find anything"]} typeSpeed={40} loop/>
+    <br />
+
+    <ReactTyped
+      strings={[
+        "Search for products",
+        "Search for categories",
+        "Search for brands",
+      ]}
+      typeSpeed={40}
+      backSpeed={50}
+      attr="placeholder"
+      loop
+    >
+      <input type="text" />
+    </ReactTyped>
+  </div> */}
         <h2 className="text-2xl font-semibold">
           I am a FullStack Web Developer
         </h2>
