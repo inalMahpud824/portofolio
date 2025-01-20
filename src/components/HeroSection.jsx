@@ -2,11 +2,11 @@ import { ReactTyped } from "react-typed";
 const HeroSection = () => {
   return (
     <div
-      className="flex justify-center flex-wrap px-6 mt-20 py-4 items-center w-full min-h-screen lg:px-[9rem] lg:justify-between lg:mt-0"
+      className="flex justify-center flex-col-reverse md:flex-row px-6 mt-20 py-4 items-center w-full min-h-screen md:px-[9rem] md:justify-between md:mt-0"
       id="about"
     >
-      <div className="text-left lg:w-[50%]">
-        <h2 className="text-4xl font-bold">Hi, I am Inal Mahpud</h2>
+      <div className="text-left md:w-[50%]">
+        <h2 className="text-4xl font-bold pb-1">Hi, I am Inal Mahpud</h2>
         <div className="inline">
           <span className="text-2xl font-semibold">I am a </span>
           <ReactTyped
@@ -26,7 +26,7 @@ const HeroSection = () => {
           technologies such as React.js, Express.js, and Node.js.
         </p>
       </div>
-      <img src="inal.jpg" alt="" className="rounded-full w-[320px] h-[300px]" />
+      <img src="inal.jpg" alt="" className="rounded-full w-[320px] h-[300px] mb-4 md:mb-0" />
     </div>
   );
 };

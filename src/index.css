@@ -19,3 +19,7 @@
 #root {
   padding: 0;
 }
+
+html {
+  scroll-padding-top: 130px;
+}

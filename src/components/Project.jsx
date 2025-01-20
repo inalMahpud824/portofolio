@@ -2,15 +2,26 @@ import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import BackdropProduct from "./ProjectDialog";
-import LanguageIcon from "@mui/icons-material/Language";
-import GitHubIcon from "@mui/icons-material/GitHub";
-
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 const ProjectSectionSecond = () => {
   return (
     <>
       <div className="min-h-screen w-full">
         <h2 className="text-4xl font-bold my-5">Projects</h2>
 
+        <ProjectContainer
+          title={"Maqdis Academy"}
+          imgurl={"/maqdis/herosection.png"}
+          linkGithub={"https://github.com/CareerConnect-Rakamin"}
+          linkWebsite={"https://careerconnect-rakamin.vercel.app/"}
+          dialogType="maqdis"
+        >
+          Maqdis Academy is a company profile website showcasing products,
+          available internship positions, and an online application feature. It
+          also includes a CMS dashboard that simplifies application and
+          applicant data management. With a responsive design, Maqdis Academy
+          ensures a seamless user experience across various devices.
+        </ProjectContainer>
         <ProjectContainer
           title={"CareerConnect"}
           imgurl={"/careerConect-ss-home.png"}
@@ -62,8 +73,6 @@ const ProjectContainer = ({
   title,
   children,
   imgurl,
-  linkGithub,
-  linkWebsite,
   dialogType,
 }) => {
   const [openFormDialog, setOpenFormDialog] = useState(false);
@@ -81,7 +90,8 @@ const ProjectContainer = ({
   return (
     <>
       <motion.div
-        className="flex flex-col md:flex-row px-10 mb-[7rem]"
+        className="flex flex-col md:flex-row px-10 mb-[2rem]"
+        id="project"
         ref={ref}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -95,21 +105,14 @@ const ProjectContainer = ({
           onClick={() => handleFormDialog(dialogType)}
           loading="la"
         />
-        <div className="text-left px-7 py-4">
+        <div className="text-left md:px-7 px-2 py-4">
           <h3 className="text-4xl font-semibold">{title}</h3>
           <p className="pb-4 pt-2">{children}</p>
-          <a href={linkWebsite} target="_blank">
-            <LanguageIcon
-              className="hover:opacity-70 mx-4"
-              sx={{ fontSize: "3.2rem" }}
-            />
-          </a>
-          <a href={linkGithub} target="_blank">
-            <GitHubIcon
-              className="hover:opacity-70"
-              sx={{ fontSize: "3rem" }}
-            />
-          </a>
+          <ArrowForwardIcon
+            className="hover:opacity-70 mx-4 cursor-pointer"
+            sx={{ fontSize: "3.2rem" }}
+            onClick={() => handleFormDialog(dialogType)}
+          />
         </div>
       </motion.div>
       {openFormDialog && (
