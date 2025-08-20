@@ -68,23 +68,11 @@ const MiniDispatch = ({ onClose }) => {
         <DialogContentText>
           Skills:{" "}
           <span className="font-bold inline">
-            Java, Spring Boot
+            Java, Spring Boot, MySql, Flespi, Mqtt
           </span>
-          <img
-            src={vehicle}
-            alt="herosection"
-            className="my-2"
-          />
-          <img
-            src={timeline}
-            alt="dashboard home"
-            className="my-2"
-          />
-          <img
-            src={map}
-            alt="my aplicant"
-            className="my-2"
-          />
+          <img src={vehicle} alt="herosection" className="my-2" />
+          <img src={timeline} alt="dashboard home" className="my-2" />
+          <img src={map} alt="my aplicant" className="my-2" />
         </DialogContentText>
       </DialogContent>
       <DialogActions>

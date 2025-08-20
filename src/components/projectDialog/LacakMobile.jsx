@@ -71,10 +71,9 @@ const LacakMobile = ({ onClose }) => {
           Year Built: <span className="font-bold inline">2025</span>
         </DialogContentText>
         <DialogContentText>
-          Skills:{" "}
-          <span className="font-bold inline">
-            Java, Spring Boot, MySql, Flespi, Mqtt
-          </span>
+          Skills: 
+          <span className="font-bold inline">Java, Spring Boot</span>
+          
           <div className="flex flex-wrap gap-2 justify-center">
             <img
               src={replay}
