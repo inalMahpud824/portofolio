@@ -1,4 +1,5 @@
 import { ReactTyped } from "react-typed";
+import inal from "../assets/img/face/inal.png";
 const HeroSection = () => {
   return (
     <div
@@ -10,7 +11,11 @@ const HeroSection = () => {
         <div className="inline">
           <span className="text-2xl font-semibold">I am a </span>
           <ReactTyped
-            strings={["Front-end Web Developer", "Back-end Developer", "FullStack Web Developer"]}
+            strings={[
+              "Front-end Web Developer",
+              "Back-end Developer",
+              "FullStack Web Developer",
+            ]}
             className="text-2xl font-semibold"
             typeSpeed={70}
             backSpeed={50}
@@ -18,15 +23,22 @@ const HeroSection = () => {
           />
         </div>
 
-        <p className="text-xl py-2 font-light">
-          I am currently an Informatics Engineering student at Universitas Islam
-          Nusantara. I have a strong passion for becoming a Software Engineer,
-          particularly as a Fullstack Developer. I have experience in designing
-          user interfaces, developing web applications, and working with various
-          technologies such as React.js, Express.js, and Node.js.
+        <p className="text-lg py-2">
+          I am an Informatics Engineering graduate with experience as a Software
+          Engineer, covering both frontend and backend development. During my
+          internship, I worked as a Frontend Developer using React.js, while in
+          my professional role I focused on backend development with Java Spring
+          Boot. I enjoy building scalable APIs, designing
+          efficient databases, and collaborating across teams to deliver
+          reliable web applications.
         </p>
       </div>
-      <img src="inal.jpg" alt="" className="rounded-full w-[320px] h-[300px] mb-4 md:mb-0" />
+      {/* <img src="inal.jpg" alt="" className="rounded-full w-[320px] h-[300px] mb-4 md:mb-0" /> */}
+      <img
+        src={inal}
+        alt=""
+        className="rounded-full w-[320px] h-[300px] mb-4 md:mb-0"
+      />
     </div>
   );
 };

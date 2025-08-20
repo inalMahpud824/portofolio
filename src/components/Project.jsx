@@ -3,12 +3,43 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import BackdropProduct from "./ProjectDialog";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import miniDispatchVehicle from "../assets/img/project/mini-dispatch/vehicle.png";
+import lacakMobile from "../assets/img/project/lacak-mobile/map-device.png";
 const ProjectSectionSecond = () => {
   return (
     <>
       <div className="min-h-screen w-full">
         <h2 className="text-4xl font-bold my-5">Projects</h2>
 
+        <ProjectContainer
+          title={"Lacak Mobile"}
+          imgurl={lacakMobile}
+          dialogType="lacak-mobile"
+        >
+          Lacak Mobile is a commercial mobile application developed to provide
+          real-time vehicle tracking and monitoring, similar to the open-source
+          Traccar platform but designed for broader usability. The app allows
+          users to track vehicles live, replay historical routes, monitor
+          driving speed, and view detailed movement data directly from their
+          smartphones. With its planned release on the Play Store and App Store,
+          Lacak Mobile aims to deliver an accessible and efficient solution for
+          fleet management and individual vehicle monitoring needs.
+        </ProjectContainer>
+
+        <ProjectContainer
+          title={"Mini Dispatch"}
+          imgurl={miniDispatchVehicle}
+          dialogType="mini-dispatch"
+        >
+          Mini Dispatch is a web-based monitoring system designed to track
+          vehicle activities in mining operations, covering operational cycles
+          such as load, haul, dump, and return. The system also enables
+          real-time monitoring of driver statuses, such as whether they are
+          actively working, taking a break, or temporarily unavailable. By
+          providing better visibility into fleet and driver activities, the
+          system helps improve operational efficiency, safety, and
+          decision-making in mining logistics.
+        </ProjectContainer>
         <ProjectContainer
           title={"Maqdis Academy"}
           imgurl={"/maqdis/herosection.png"}
@@ -69,12 +100,7 @@ const ProjectSectionSecond = () => {
   );
 };
 
-const ProjectContainer = ({
-  title,
-  children,
-  imgurl,
-  dialogType,
-}) => {
+const ProjectContainer = ({ title, children, imgurl, dialogType }) => {
   const [openFormDialog, setOpenFormDialog] = useState(false);
   const [typeProject, setTypeProject] = useState(null);
 
@@ -101,7 +127,7 @@ const ProjectContainer = ({
         <img
           src={imgurl}
           alt=""
-          className="w-[30rem] h-[17rem] rounded-xl hover:opacity-70 cursor-pointer"
+          className="min-w-[30rem] max-w-[30rem] h-[17rem] rounded-xl hover:opacity-70 cursor-pointer"
           onClick={() => handleFormDialog(dialogType)}
           loading="la"
         />
