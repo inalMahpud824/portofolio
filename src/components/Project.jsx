@@ -127,7 +127,7 @@ const ProjectContainer = ({ title, children, imgurl, dialogType }) => {
         <img
           src={imgurl}
           alt=""
-          className="min-w-[30rem] max-w-[30rem] h-[17rem] rounded-xl hover:opacity-70 cursor-pointer"
+          className="md:min-w-[30rem] md:max-w-[30rem] h-[17rem] rounded-xl hover:opacity-70 cursor-pointer w-full"
           onClick={() => handleFormDialog(dialogType)}
           loading="la"
         />
